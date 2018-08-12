@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+
+    <GridLayout
+    android:rowCount="4"
+    android:columnCount="2"
+    android:layout_width="match_parent"
+    android:alignmentMode="alignMargins"
+    android:columnOrderPreserved="false"
+    android:padding="0dp"
+    android:layout_height="match_parent">
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            app:cardBackgroundColor="@color/colorPrimary2"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="10dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnWeight="2"
+            android:layout_rowWeight="4"
+            android:layout_margin="10dp">
+
+            <RelativeLayout
+                android:id="@+id/networkTheory"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="0dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/subjectText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="1dp"
+                    android:text="  Network Theory  "
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/attendTextNetwork"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignStart="@id/subjectText"
+                    android:layout_alignEnd="@id/subjectText"
+                    android:layout_below="@+id/subjectText"
+                    android:text="0/0  0.0%"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+
+                <!--
+                <TextView
+                    android:id="@+id/percentTextNetwork"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@id/subjectText"
+                    android:layout_below="@+id/subjectText"
+                    android:text="0 %"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+                -->
+
+                <Button
+                    android:id="@+id/sitButtonNetwork"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignStart="@id/attendTextNetwork"
+                    android:layout_below="@id/attendTextNetwork"
+                    android:onClick="sitFunctionNetwork"
+                    android:text="sit"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/bunkButtonNetwork"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_alignEnd="@id/attendTextNetwork"
+                    android:layout_below="@id/attendTextNetwork"
+                    android:onClick="bunkFunctionNetwork"
+                    android:text="Bunk"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            app:cardBackgroundColor="@color/colorPrimary2"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="10dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_columnWeight="2"
+            android:layout_rowWeight="4"
+            android:layout_margin="10dp">
+
+            <RelativeLayout
+                android:id="@+id/solidState"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="0dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/subjectTextSolid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="1dp"
+                    android:layout_gravity="center"
+                    android:text=" Solid St. Device "
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/attendTextSolid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignStart="@id/subjectTextSolid"
+                    android:layout_alignEnd="@id/subjectTextSolid"
+                    android:gravity="center"
+                    android:layout_below="@+id/subjectTextSolid"
+                    android:text="0/0  0.0%"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+
+                <!--
+                <TextView
+                    android:id="@+id/percentTextSolid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/subjectTextSolid"
+                    android:layout_below="@+id/subjectTextSolid"
+                    android:text="0 %"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+                -->
+
+                <Button
+                    android:id="@+id/sitButtonSolid"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignStart="@id/attendTextSolid"
+                    android:layout_below="@id/attendTextSolid"
+                    android:onClick="sitFunctionSolid"
+                    android:text="sit"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/bunkButtonSolid"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_alignEnd="@id/attendTextSolid"
+                    android:layout_below="@id/attendTextSolid"
+                    android:onClick="bunkFunctionSolid"
+                    android:text="Bunk"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            app:cardBackgroundColor="@color/colorPrimary2"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="10dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_columnWeight="2"
+            android:layout_rowWeight="4"
+            android:layout_margin="10dp">
+
+            <RelativeLayout
+                android:id="@+id/electronicsCircuits"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="0dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/subjectTextCircuits"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="1dp"
+                    android:layout_gravity="center"
+                    android:text=" Electro. Circuits "
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/attendTextCircuits"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/subjectTextCircuits"
+                    android:layout_alignEnd="@id/subjectTextCircuits"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:layout_below="@+id/subjectTextCircuits"
+                    android:text="0/0  0.0%"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+
+                <!--
+                <TextView
+                    android:id="@+id/percentTextCircuits"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/subjectTextCircuits"
+                    android:layout_below="@+id/subjectTextCircuits"
+                    android:text="0 %"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+                -->
+
+                <Button
+                    android:id="@+id/sitButtonCircuits"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignStart="@id/attendTextCircuits"
+                    android:layout_below="@id/attendTextCircuits"
+                    android:onClick="sitFunctionCircuits"
+                    android:text="sit"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/bunkButtonCircuits"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_alignEnd="@id/attendTextCircuits"
+                    android:layout_below="@id/attendTextCircuits"
+                    android:onClick="bunkFunctionCircuits"
+                    android:text="Bunk"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            app:cardBackgroundColor="@color/colorPrimary2"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="10dp"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_columnWeight="2"
+            android:layout_rowWeight="4"
+            android:layout_margin="10dp">
+
+            <RelativeLayout
+                android:id="@+id/logic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="0dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/subjectTextLogic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="1dp"
+                    android:layout_gravity="center"
+                    android:text="  Logic  Design   "
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/attendTextLogic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/subjectTextLogic"
+                    android:layout_alignEnd="@id/subjectTextLogic"
+                    android:gravity="center"
+                    android:layout_below="@+id/subjectTextLogic"
+                    android:layout_centerInParent="true"
+                    android:text="0/0  0.0%"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+
+                <!--
+                <TextView
+                    android:id="@+id/percentTextLogic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/subjectTextLogic"
+                    android:layout_below="@+id/subjectTextLogic"
+                    android:text="0 %"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+                -->
+
+                <Button
+                    android:id="@+id/sitButtonLogic"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignStart="@id/attendTextLogic"
+                    android:layout_below="@id/attendTextLogic"
+                    android:onClick="sitFunctionLogic"
+                    android:text="sit"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/bunkButtonLogic"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_alignEnd="@id/attendTextLogic"
+                    android:layout_below="@id/attendTextLogic"
+                    android:onClick="bunkFunctionLogic"
+                    android:text="Bunk"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            app:cardBackgroundColor="@color/colorPrimary2"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="10dp"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_columnWeight="2"
+            android:layout_rowWeight="4"
+            android:layout_margin="10dp">
+
+            <RelativeLayout
+                android:id="@+id/math"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="0dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/subjectTextMath"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="1dp"
+                    android:layout_gravity="center"
+                    android:text="    Mathematics    "
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/attendTextMath"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/subjectTextMath"
+                    android:layout_alignEnd="@id/subjectTextMath"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:layout_below="@+id/subjectTextMath"
+                    android:text="0/0  0.0%"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+
+                <!--
+                <TextView
+                    android:id="@+id/percentTextMath"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/subjectTextMath"
+                    android:layout_below="@+id/subjectTextMath"
+                    android:text="0 %"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+                -->
+
+                <Button
+                    android:id="@+id/sitButtonMath"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignStart="@id/attendTextMath"
+                    android:layout_below="@id/attendTextMath"
+                    android:onClick="sitFunctionMath"
+                    android:text="sit"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/bunkButtonMath"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_alignEnd="@id/attendTextMath"
+                    android:layout_below="@id/attendTextMath"
+                    android:onClick="bunkFunctionMath"
+                    android:text="Bunk"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            app:cardBackgroundColor="@color/colorPrimary2"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="10dp"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:layout_columnWeight="2"
+            android:layout_rowWeight="4"
+            android:layout_margin="10dp">
+
+            <RelativeLayout
+                android:id="@+id/economics"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="0dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/subjectTextEco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="1dp"
+                    android:layout_gravity="center"
+                    android:text="    Business Eco    "
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/attendTextEco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/subjectTextEco"
+                    android:layout_alignEnd="@id/subjectTextEco"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:layout_below="@+id/subjectTextEco"
+                    android:text="0/0  0.0%"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+
+                <!--
+                <TextView
+                    android:id="@+id/percentTextEco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/subjectTextEco"
+                    android:layout_below="@+id/subjectTextEco"
+                    android:text="0 %"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+                -->
+
+                <Button
+                    android:id="@+id/sitButtonEco"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignStart="@id/attendTextEco"
+                    android:layout_below="@id/attendTextEco"
+                    android:onClick="sitFunctionEco"
+                    android:text="sit"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/bunkButtonEco"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_alignEnd="@id/attendTextEco"
+                    android:layout_below="@id/attendTextEco"
+                    android:onClick="bunkFunctionEco"
+                    android:text="Bunk"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            app:cardBackgroundColor="@color/colorPrimary2"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="10dp"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:layout_columnWeight="2"
+            android:layout_rowWeight="4"
+            android:layout_margin="10dp">
+
+            <RelativeLayout
+                android:id="@+id/circuitsLab"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="0dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/subjectTextCircLab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="1dp"
+                    android:layout_gravity="center"
+                    android:text="    Circuits  Lab    "
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/attendTextCircLab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/subjectTextCircLab"
+                    android:layout_alignEnd="@id/subjectTextCircLab"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:layout_below="@+id/subjectTextCircLab"
+                    android:text="0/0  0.0%"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+
+                <!--
+                <TextView
+                    android:id="@+id/percentTextCircLab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/subjectTextCircLab"
+                    android:layout_below="@+id/subjectTextCircLab"
+                    android:text="0 %"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+                -->
+
+                <Button
+                    android:id="@+id/sitButtonCircLab"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignStart="@id/attendTextCircLab"
+                    android:layout_below="@id/attendTextCircLab"
+                    android:onClick="sitFunctionCircLab"
+                    android:text="sit"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/bunkButtonCircLab"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_alignEnd="@id/attendTextCircLab"
+                    android:layout_below="@id/attendTextCircLab"
+                    android:onClick="bunkFunctionCircLab"
+                    android:text="Bunk"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            app:cardBackgroundColor="@color/colorPrimary2"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="10dp"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:layout_columnWeight="2"
+            android:layout_rowWeight="4"
+            android:layout_margin="10dp">
+
+            <RelativeLayout
+                android:id="@+id/designLab"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="0dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/subjectTextDesLab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentTop="true"
+                     android:layout_marginTop="1dp"
+                    android:layout_gravity="center"
+                    android:text="    Design   Lab    "
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/attendTextDesLab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/subjectTextDesLab"
+                    android:layout_alignEnd="@id/subjectTextDesLab"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:layout_below="@+id/subjectTextDesLab"
+                    android:text="0/0  0.0%"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+
+                <!--
+                <TextView
+                    android:id="@+id/percentTextDesLab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/subjectTextDesLab"
+                    android:layout_below="@+id/subjectTextDesLab"
+                    android:text="0 %"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+                -->
+
+                <Button
+                    android:id="@+id/sitButtonDesLab"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignStart="@id/attendTextDesLab"
+                    android:layout_below="@id/attendTextDesLab"
+                    android:onClick="sitFunctionDesLab"
+                    android:text="sit"
+                    android:textSize="10sp"
+                    />
+
+                <Button
+                    android:id="@+id/bunkButtonDesLab"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_alignEnd="@id/attendTextDesLab"
+                    android:layout_below="@id/attendTextDesLab"
+                    android:onClick="bunkFunctionDesLab"
+                    android:text="Bunk"
+                    android:textSize="10sp"
+                    />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+    </GridLayout>
+
+
+</LinearLayout>

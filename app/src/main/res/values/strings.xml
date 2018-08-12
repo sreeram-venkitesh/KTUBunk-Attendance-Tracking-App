@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">S3LBunkers!</string>
+
+    <string name="eces3_1">Network Theory</string>
+    <string name="eces3_2">Solid St. Device</string>
+    <string name="eces3_3">Electro. Circuits</string>
+    <string name="eces3_4">Logic Design</string>
+    <string name="eces3_5">Mathematics</string>
+    <string name="eces3_6">Business Eco</string>
+    <string name="eces3_7">Circuits Lab</string>
+    <string name="eces3_8">Design Lab</string>
+
+</resources>
