@@ -14,6 +14,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    //Variable Decleration
+
     TextView subTextOne,attendTextNetwork;//,percentTextNetwork;
     TextView subTextTwo,attendTextSolid;//,percentTextSolid;
     TextView subTextThree,attendTextCircuits;//,percentTextCircuits;
@@ -32,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     Button sitButtonCircLab,bunkButtonCircLab;
     Button sitButtonDesLab,bunkButtonDesLab;
 
-    SharedPreferences sharedPreferences;
+    SharedPreferences sharedPreferences; // Used to store data in device
 
     boolean isFirstRun;
 
