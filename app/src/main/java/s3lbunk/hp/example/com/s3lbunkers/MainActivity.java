@@ -35,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
     SharedPreferences sharedPreferences;
 
     boolean isFirstRun;
+    
+    boolean state = false;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
