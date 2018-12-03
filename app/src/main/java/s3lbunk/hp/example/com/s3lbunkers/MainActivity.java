@@ -14,14 +14,14 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView subTextOne,attendTextNetwork;//,percentTextNetwork;
-    TextView subTextTwo,attendTextSolid;//,percentTextSolid;
-    TextView subTextThree,attendTextCircuits;//,percentTextCircuits;
-    TextView subTextFour,attendTextLogic;//,percentTextLogic;
-    TextView subTextFive,attendTextMath;//,percentTextMath;
-    TextView subTextSix,attendTextEco;//,percentTextEco;
-    TextView subTextSeven,attendTextCircLab;//,percentTextCircLab;
-    TextView subTextEight,attendTextDesLab;//,percentTextDesLab;
+    TextView subTextOne,attendTextSub1;//,percentTextNetwork;
+    TextView subTextTwo,attendTextSub2;//,percentTextSolid;
+    TextView subTextThree,attendTextSub3;//,percentTextCircuits;
+    TextView subTextFour,attendTextSub4;//,percentTextLogic;
+    TextView subTextFive,attendTextSub5;//,percentTextMath;
+    TextView subTextSix,attendTextSub6;//,percentTextEco;
+    TextView subTextSeven,attendTextSub7;//,percentTextCircLab;
+    TextView subTextEight,attendTextSub8;//,percentTextDesLab;
 
     Button sitButtonNetwork,bunkButtonNetwork;
     Button sitButtonSolid,bunkButtonSolid;
@@ -91,28 +91,28 @@ public class MainActivity extends AppCompatActivity {
                                               sharedPreferences.edit().putInt("design lab total",0).apply();
                                               sharedPreferences.edit().putFloat("design lab percent",0).apply();
 
-                                              attendTextNetwork.setText(String.valueOf(sharedPreferences.getInt("network theory",0)) + "/" + sharedPreferences.getInt("network theory total",0)+" "+String.format("%.2f",sharedPreferences.getFloat("network theory percent",0))+"%");
+                                              attendTextSub1.setText(String.valueOf(sharedPreferences.getInt("network theory",0)) + "/" + sharedPreferences.getInt("network theory total",0)+" "+String.format("%.2f",sharedPreferences.getFloat("network theory percent",0))+"%");
                                               //percentTextNetwork.setText(String.format("%.2f",sharedPreferences.getFloat("network theory percent",0))+"%");
 
-                                              attendTextSolid.setText(String.valueOf(sharedPreferences.getInt("solid state devices",0)) + "/" + sharedPreferences.getInt("solid state devices total",0)+" "+String.format("%.2f",sharedPreferences.getFloat("solid state devices percent",0))+"%");
+                                              attendTextSub2.setText(String.valueOf(sharedPreferences.getInt("solid state devices",0)) + "/" + sharedPreferences.getInt("solid state devices total",0)+" "+String.format("%.2f",sharedPreferences.getFloat("solid state devices percent",0))+"%");
                                               //percentTextSolid.setText(String.format("%.2f",sharedPreferences.getFloat("solid state devices percent",0))+"%");
 
-                                              attendTextCircuits.setText(String.valueOf(sharedPreferences.getInt("electronic circuits ",0)) + "/" + sharedPreferences.getInt("electronic circuits total",0)+" "+String.format("%.2f",sharedPreferences.getFloat("electronic circuits percent",0))+"%");
+                                              attendTextSub3.setText(String.valueOf(sharedPreferences.getInt("electronic circuits ",0)) + "/" + sharedPreferences.getInt("electronic circuits total",0)+" "+String.format("%.2f",sharedPreferences.getFloat("electronic circuits percent",0))+"%");
                                               //percentTextCircuits.setText(String.format("%.2f",sharedPreferences.getFloat("electronic circuits percent",0))+"%");
 
-                                              attendTextLogic.setText(String.valueOf(sharedPreferences.getInt("logic circuit design",0)) + "/" + sharedPreferences.getInt("logic circuit design total",0)+" "+String.format("%.2f",sharedPreferences.getFloat("logic circuit design percent",0))+"%");
+                                              attendTextSub4.setText(String.valueOf(sharedPreferences.getInt("logic circuit design",0)) + "/" + sharedPreferences.getInt("logic circuit design total",0)+" "+String.format("%.2f",sharedPreferences.getFloat("logic circuit design percent",0))+"%");
                                               //percentTextLogic.setText(String.format("%.2f",sharedPreferences.getFloat("logic circuit design percent",0))+"%");
 
-                                              attendTextMath.setText(String.valueOf(sharedPreferences.getInt("maths",0)) + "/" + sharedPreferences.getInt("maths total",0)+" "+String.format("%.2f",sharedPreferences.getFloat("maths percent",0))+"%");
+                                              attendTextSub5.setText(String.valueOf(sharedPreferences.getInt("maths",0)) + "/" + sharedPreferences.getInt("maths total",0)+" "+String.format("%.2f",sharedPreferences.getFloat("maths percent",0))+"%");
                                               //percentTextMath.setText(String.format("%.2f",sharedPreferences.getFloat("maths percent",0))+"%");
 
-                                              attendTextEco.setText(String.valueOf(sharedPreferences.getInt("economics",0)) + "/" + sharedPreferences.getInt("economics total",0)+" "+String.format("%.2f",sharedPreferences.getFloat("economics percent",0))+"%");
+                                              attendTextSub6.setText(String.valueOf(sharedPreferences.getInt("economics",0)) + "/" + sharedPreferences.getInt("economics total",0)+" "+String.format("%.2f",sharedPreferences.getFloat("economics percent",0))+"%");
                                               //percentTextEco.setText(String.format("%.2f",sharedPreferences.getFloat("economics percent",0))+"%");
 
-                                              attendTextCircLab.setText(String.valueOf(sharedPreferences.getInt("circuits lab",0)) + "/" + sharedPreferences.getInt("circuits lab total",0)+" "+String.format("%.2f",sharedPreferences.getFloat("circuits lab percent",0))+"%");
+                                              attendTextSub7.setText(String.valueOf(sharedPreferences.getInt("circuits lab",0)) + "/" + sharedPreferences.getInt("circuits lab total",0)+" "+String.format("%.2f",sharedPreferences.getFloat("circuits lab percent",0))+"%");
                                               //percentTextCircLab.setText(String.format("%.2f",sharedPreferences.getFloat("circuits lab percent",0))+"%");
 
-                                              attendTextDesLab.setText(String.valueOf(sharedPreferences.getInt("design lab",0)) + "/" + sharedPreferences.getInt("design lab total",0)+" "+String.format("%.2f",sharedPreferences.getFloat("design lab percent",0))+"%");
+                                              attendTextSub8.setText(String.valueOf(sharedPreferences.getInt("design lab",0)) + "/" + sharedPreferences.getInt("design lab total",0)+" "+String.format("%.2f",sharedPreferences.getFloat("design lab percent",0))+"%");
                                               //percentTextDesLab.setText(String.format("%.2f",sharedPreferences.getFloat("design lab percent",0))+"%");
                                           }
                                       })
@@ -185,42 +185,42 @@ public class MainActivity extends AppCompatActivity {
         getSharedPreferences("PREFERENCE",MODE_PRIVATE).edit()
                 .putBoolean("isFirstRun",false).apply();
 
-        attendTextNetwork = (TextView) findViewById(R.id.attendTextNetwork);
+        attendTextSub1 = (TextView) findViewById(R.id.attendTextSub1);
         //percentTextNetwork = (TextView) findViewById(R.id.percentTextNetwork);
         sitButtonNetwork = (Button) findViewById(R.id.sitButtonNetwork);
         bunkButtonNetwork = (Button) findViewById(R.id.bunkButtonNetwork);
 
-        attendTextSolid = (TextView) findViewById(R.id.attendTextSolid);
+        attendTextSub2 = (TextView) findViewById(R.id.attendTextSub2);
         //percentTextSolid = (TextView) findViewById(R.id.percentTextSolid);
         sitButtonSolid = (Button) findViewById(R.id.sitButtonSolid);
         bunkButtonSolid = (Button) findViewById(R.id.bunkButtonSolid);
 
-        attendTextCircuits = (TextView) findViewById(R.id.attendTextCircuits);
+        attendTextSub3 = (TextView) findViewById(R.id.attendTextSub3);
         //percentTextCircuits = (TextView) findViewById(R.id.percentTextCircuits);
         sitButtonCircuits = (Button) findViewById(R.id.sitButtonCircuits);
         bunkButtonCircuits = (Button) findViewById(R.id.bunkButtonCircuits);
 
-        attendTextLogic = (TextView) findViewById(R.id.attendTextLogic);
+        attendTextSub4 = (TextView) findViewById(R.id.attendTextSub4);
         //percentTextLogic = (TextView) findViewById(R.id.percentTextLogic);
         sitButtonLogic = (Button) findViewById(R.id.sitButtonLogic);
         bunkButtonLogic = (Button) findViewById(R.id.bunkButtonLogic);
 
-        attendTextMath = (TextView) findViewById(R.id.attendTextMath);
+        attendTextSub5 = (TextView) findViewById(R.id.attendTextSub5);
         //percentTextMath = (TextView) findViewById(R.id.percentTextMath);
         sitButtonMath = (Button) findViewById(R.id.sitButtonMath);
         bunkButtonMath = (Button) findViewById(R.id.bunkButtonMath);
 
-        attendTextEco = (TextView) findViewById(R.id.attendTextEco);
+        attendTextSub6 = (TextView) findViewById(R.id.attendTextSub6);
         //percentTextEco = (TextView) findViewById(R.id.percentTextEco);
         sitButtonEco = (Button) findViewById(R.id.sitButtonEco);
         bunkButtonEco = (Button) findViewById(R.id.bunkButtonEco);
 
-        attendTextCircLab = (TextView) findViewById(R.id.attendTextCircLab);
+        attendTextSub7 = (TextView) findViewById(R.id.attendTextSub7);
         //percentTextCircLab = (TextView) findViewById(R.id.percentTextCircLab);
         sitButtonCircLab = (Button) findViewById(R.id.sitButtonCircLab);
         bunkButtonCircLab = (Button) findViewById(R.id.bunkButtonCircLab);
 
-        attendTextDesLab = (TextView) findViewById(R.id.attendTextDesLab);
+        attendTextSub8 = (TextView) findViewById(R.id.attendTextSub8);
         //percentTextDesLab = (TextView) findViewById(R.id.percentTextDesLab);
         sitButtonDesLab = (Button) findViewById(R.id.sitButtonDesLab);
         bunkButtonDesLab = (Button) findViewById(R.id.bunkButtonDesLab);
@@ -229,28 +229,28 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        attendTextNetwork.setText(String.valueOf(sharedPreferences.getInt("network theory",0)) + "/" + sharedPreferences.getInt("network theory total",0)+" "+String.format("%.2f",sharedPreferences.getFloat("network theory percent",0))+"%");
+        attendTextSub1.setText(String.valueOf(sharedPreferences.getInt("network theory",0)) + "/" + sharedPreferences.getInt("network theory total",0)+" "+String.format("%.2f",sharedPreferences.getFloat("network theory percent",0))+"%");
         //percentTextNetwork.setText(String.format("%.2f",sharedPreferences.getFloat("network theory percent",0))+"%");
 
-        attendTextSolid.setText(String.valueOf(sharedPreferences.getInt("solid state devices",0)) + "/" + sharedPreferences.getInt("solid state devices total",0) + " " + String.format("%.2f",sharedPreferences.getFloat("solid state devices percent",0))+"%");
+        attendTextSub2.setText(String.valueOf(sharedPreferences.getInt("solid state devices",0)) + "/" + sharedPreferences.getInt("solid state devices total",0) + " " + String.format("%.2f",sharedPreferences.getFloat("solid state devices percent",0))+"%");
         //percentTextSolid.setText(String.format("%.2f",sharedPreferences.getFloat("solid state devices percent",0))+"%");
 
-        attendTextCircuits.setText(String.valueOf(sharedPreferences.getInt("electronic circuits ",0)) + "/" + sharedPreferences.getInt("electronic circuits total",0)+" "+String.format("%.2f",sharedPreferences.getFloat("electronic circuits percent",0))+"%");
+        attendTextSub3.setText(String.valueOf(sharedPreferences.getInt("electronic circuits ",0)) + "/" + sharedPreferences.getInt("electronic circuits total",0)+" "+String.format("%.2f",sharedPreferences.getFloat("electronic circuits percent",0))+"%");
         //percentTextCircuits.setText(String.format("%.2f",sharedPreferences.getFloat("electronic circuits percent",0))+"%");
 
-        attendTextLogic.setText(String.valueOf(sharedPreferences.getInt("logic circuit design",0)) + "/" + sharedPreferences.getInt("logic circuit design total",0)+" "+String.format("%.2f",sharedPreferences.getFloat("logic circuit design percent",0))+"%");
+        attendTextSub4.setText(String.valueOf(sharedPreferences.getInt("logic circuit design",0)) + "/" + sharedPreferences.getInt("logic circuit design total",0)+" "+String.format("%.2f",sharedPreferences.getFloat("logic circuit design percent",0))+"%");
         //percentTextLogic.setText(String.format("%.2f",sharedPreferences.getFloat("logic circuit design percent",0))+"%");
 
-        attendTextMath.setText(String.valueOf(sharedPreferences.getInt("maths",0)) + "/" + sharedPreferences.getInt("maths total",0)+" "+String.format("%.2f",sharedPreferences.getFloat("maths percent",0))+"%");
+        attendTextSub5.setText(String.valueOf(sharedPreferences.getInt("maths",0)) + "/" + sharedPreferences.getInt("maths total",0)+" "+String.format("%.2f",sharedPreferences.getFloat("maths percent",0))+"%");
         //percentTextMath.setText(String.format("%.2f",sharedPreferences.getFloat("maths percent",0))+"%");
 
-        attendTextEco.setText(String.valueOf(sharedPreferences.getInt("economics",0)) + "/" + sharedPreferences.getInt("economics total",0)+" "+String.format("%.2f",sharedPreferences.getFloat("economics percent",0))+"%");
+        attendTextSub6.setText(String.valueOf(sharedPreferences.getInt("economics",0)) + "/" + sharedPreferences.getInt("economics total",0)+" "+String.format("%.2f",sharedPreferences.getFloat("economics percent",0))+"%");
         //percentTextEco.setText(String.format("%.2f",sharedPreferences.getFloat("economics percent",0))+"%");
 
-        attendTextCircLab.setText(String.valueOf(sharedPreferences.getInt("circuits lab",0)) + "/" + sharedPreferences.getInt("circuits lab total",0)+" "+String.format("%.2f",sharedPreferences.getFloat("circuits lab percent",0))+"%");
+        attendTextSub7.setText(String.valueOf(sharedPreferences.getInt("circuits lab",0)) + "/" + sharedPreferences.getInt("circuits lab total",0)+" "+String.format("%.2f",sharedPreferences.getFloat("circuits lab percent",0))+"%");
         //percentTextCircLab.setText(String.format("%.2f",sharedPreferences.getFloat("circuits lab percent",0))+"%");
 
-        attendTextDesLab.setText(String.valueOf(sharedPreferences.getInt("design lab",0)) + "/" + sharedPreferences.getInt("design lab total",0)+" "+String.format("%.2f",sharedPreferences.getFloat("design lab percent",0))+"%");
+        attendTextSub8.setText(String.valueOf(sharedPreferences.getInt("design lab",0)) + "/" + sharedPreferences.getInt("design lab total",0)+" "+String.format("%.2f",sharedPreferences.getFloat("design lab percent",0))+"%");
         //percentTextDesLab.setText(String.format("%.2f",sharedPreferences.getFloat("design lab percent",0))+"%");
 
 
@@ -272,7 +272,7 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences.edit().putInt("network theory",attended).apply();
         sharedPreferences.edit().putInt("network theory total",total).apply();
 
-        attendTextNetwork.setText( String.valueOf(attended) + "/" + String.valueOf(total) + " "+ String.format("%.2f",percentageNetwork)+"%");
+        attendTextSub1.setText( String.valueOf(attended) + "/" + String.valueOf(total) + " "+ String.format("%.2f",percentageNetwork)+"%");
         //percentTextNetwork.setText(String.format("%.2f",percentageNetwork)+"%");
 
 
@@ -294,7 +294,7 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences.edit().putInt("solid state devices",attended).apply();
         sharedPreferences.edit().putInt("solid state devices total",total).apply();
 
-        attendTextSolid.setText( String.valueOf(attended) + "/" + String.valueOf(total)+" "+String.format("%.2f",percentageSolid)+"%");
+        attendTextSub2.setText( String.valueOf(attended) + "/" + String.valueOf(total)+" "+String.format("%.2f",percentageSolid)+"%");
         //percentTextSolid.setText(String.format("%.2f",percentageSolid)+"%");
 
 
@@ -316,7 +316,7 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences.edit().putInt("electronic circuits",attended).apply();
         sharedPreferences.edit().putInt("electronic circuits total",total).apply();
 
-        attendTextCircuits.setText( String.valueOf(attended) + "/" + String.valueOf(total)+" "+ String.format("%.2f",percentageCircuits)+"%");
+        attendTextSub3.setText( String.valueOf(attended) + "/" + String.valueOf(total)+" "+ String.format("%.2f",percentageCircuits)+"%");
         //percentTextCircuits.setText(String.format("%.2f",percentageCircuits)+"%");
 
 
@@ -338,7 +338,7 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences.edit().putInt("logic circuit design",attended).apply();
         sharedPreferences.edit().putInt("logic circuit design total",total).apply();
 
-        attendTextLogic.setText( String.valueOf(attended) + "/" + String.valueOf(total)+" "+String.format("%.2f",percentageLogic)+"%");
+        attendTextSub4.setText( String.valueOf(attended) + "/" + String.valueOf(total)+" "+String.format("%.2f",percentageLogic)+"%");
         //percentTextLogic.setText(String.format("%.2f",percentageLogic)+"%");
 
 
@@ -358,7 +358,7 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences.edit().putInt("maths",attended).apply();
         sharedPreferences.edit().putInt("maths total",total).apply();
 
-        attendTextMath.setText( String.valueOf(attended) + "/" + String.valueOf(total)+" "+String.format("%.2f",percentageMath)+"%");
+        attendTextSub5.setText( String.valueOf(attended) + "/" + String.valueOf(total)+" "+String.format("%.2f",percentageMath)+"%");
         //percentTextMath.setText(String.format("%.2f",percentageMath)+"%");
 
 
@@ -380,7 +380,7 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences.edit().putInt("economics",attended).apply();
         sharedPreferences.edit().putInt("economics total",total).apply();
 
-        attendTextEco.setText( String.valueOf(attended) + "/" + String.valueOf(total)+" "+String.format("%.2f",percentageEco)+"%");
+        attendTextSub6.setText( String.valueOf(attended) + "/" + String.valueOf(total)+" "+String.format("%.2f",percentageEco)+"%");
         //percentTextEco.setText(String.format("%.2f",percentageEco)+"%");
 
 
@@ -402,7 +402,7 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences.edit().putInt("circuits lab",attended).apply();
         sharedPreferences.edit().putInt("circuits lab total",total).apply();
 
-        attendTextCircLab.setText( String.valueOf(attended) + "/" + String.valueOf(total)+" "+String.format("%.2f",percentageCircLab)+"%");
+        attendTextSub7.setText( String.valueOf(attended) + "/" + String.valueOf(total)+" "+String.format("%.2f",percentageCircLab)+"%");
         //percentTextCircLab.setText(String.format("%.2f",percentageCircLab)+"%");
 
 
@@ -424,7 +424,7 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences.edit().putInt("design lab",attended).apply();
         sharedPreferences.edit().putInt("design lab total",total).apply();
 
-        attendTextDesLab.setText( String.valueOf(attended) + "/" + String.valueOf(total)+" "+String.format("%.2f",percentageDesLab)+"%");
+        attendTextSub8.setText( String.valueOf(attended) + "/" + String.valueOf(total)+" "+String.format("%.2f",percentageDesLab)+"%");
         //percentTextDesLab.setText(String.format("%.2f",percentageDesLab)+"%");
 
 
@@ -443,7 +443,7 @@ public class MainActivity extends AppCompatActivity {
       sharedPreferences.edit().putInt("network theory total",total).apply();
 
       //percentTextNetwork.setText(String.format("%.2f",percentageNetwork)+"%");
-      attendTextNetwork.setText(String.valueOf(attended) + "/" + String.valueOf(total)+" "+String.format("%.2f",percentageNetwork)+"%");
+      attendTextSub1.setText(String.valueOf(attended) + "/" + String.valueOf(total)+" "+String.format("%.2f",percentageNetwork)+"%");
 
     }
 
@@ -462,7 +462,7 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences.edit().putInt("solid state devices total",total).apply();
 
 
-        attendTextSolid.setText(String.valueOf(attended) + "/" + String.valueOf(total)+" "+String.format("%.2f",percentageSolid)+"%");
+        attendTextSub2.setText(String.valueOf(attended) + "/" + String.valueOf(total)+" "+String.format("%.2f",percentageSolid)+"%");
 
     }
 
@@ -481,7 +481,7 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences.edit().putInt("electronic circuits total",total).apply();
 
 
-        attendTextCircuits.setText(String.valueOf(attended) + "/" + String.valueOf(total)+" "+String.format("%.2f",percentageCircuits)+"%");
+        attendTextSub3.setText(String.valueOf(attended) + "/" + String.valueOf(total)+" "+String.format("%.2f",percentageCircuits)+"%");
 
     }
 
@@ -500,7 +500,7 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences.edit().putInt("logic circuit design total",total).apply();
 
 
-        attendTextLogic.setText(String.valueOf(attended) + "/" + String.valueOf(total)+" "+String.format("%.2f",percentageLogic)+"%");
+        attendTextSub4.setText(String.valueOf(attended) + "/" + String.valueOf(total)+" "+String.format("%.2f",percentageLogic)+"%");
 
     }
 
@@ -519,7 +519,7 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences.edit().putInt("maths total",total).apply();
 
 
-        attendTextMath.setText(String.valueOf(attended) + "/" + String.valueOf(total)+" "+String.format("%.2f",percentageMath)+"%");
+        attendTextSub5.setText(String.valueOf(attended) + "/" + String.valueOf(total)+" "+String.format("%.2f",percentageMath)+"%");
 
     }
 
@@ -538,7 +538,7 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences.edit().putInt("economics total",total).apply();
 
 
-        attendTextEco.setText(String.valueOf(attended) + "/" + String.valueOf(total)+" "+String.format("%.2f",percentageEco)+"%");
+        attendTextSub6.setText(String.valueOf(attended) + "/" + String.valueOf(total)+" "+String.format("%.2f",percentageEco)+"%");
 
     }
 
@@ -557,7 +557,7 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences.edit().putInt("circuits lab total",total).apply();
 
 
-        attendTextCircLab.setText(String.valueOf(attended) + "/" + String.valueOf(total)+" "+String.format("%.2f",percentageCircLab)+"%");
+        attendTextSub7.setText(String.valueOf(attended) + "/" + String.valueOf(total)+" "+String.format("%.2f",percentageCircLab)+"%");
 
     }
 
@@ -576,7 +576,7 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences.edit().putInt("design lab total",total).apply();
 
 
-        attendTextDesLab.setText(String.valueOf(attended) + "/" + String.valueOf(total)+" "+String.format("%.2f",percentageDesLab)+"%");
+        attendTextSub8.setText(String.valueOf(attended) + "/" + String.valueOf(total)+" "+String.format("%.2f",percentageDesLab)+"%");
 
     }
 

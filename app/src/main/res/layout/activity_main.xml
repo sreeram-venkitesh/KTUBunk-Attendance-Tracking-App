@@ -52,7 +52,7 @@
                     android:textSize="15sp" />
 
                 <TextView
-                    android:id="@+id/attendTextNetwork"
+                    android:id="@+id/attendTextSub1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
@@ -80,8 +80,8 @@
                     android:id="@+id/sitButtonNetwork"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:layout_alignStart="@id/attendTextNetwork"
-                    android:layout_below="@id/attendTextNetwork"
+                    android:layout_alignStart="@id/attendTextSub1"
+                    android:layout_below="@id/attendTextSub1"
                     android:onClick="sitFunctionNetwork"
                     android:text="sit"
                     android:textSize="10sp" />
@@ -90,8 +90,8 @@
                     android:id="@+id/bunkButtonNetwork"
                     android:layout_width="60dp"
                     android:layout_height="50dp"
-                    android:layout_alignEnd="@id/attendTextNetwork"
-                    android:layout_below="@id/attendTextNetwork"
+                    android:layout_alignEnd="@id/attendTextSub1"
+                    android:layout_below="@id/attendTextSub1"
                     android:onClick="bunkFunctionNetwork"
                     android:text="Bunk"
                     android:textSize="10sp" />
@@ -134,7 +134,7 @@
                     android:textSize="15sp" />
 
                 <TextView
-                    android:id="@+id/attendTextSolid"
+                    android:id="@+id/attendTextSub2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
@@ -162,8 +162,8 @@
                     android:id="@+id/sitButtonSolid"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:layout_alignStart="@id/attendTextSolid"
-                    android:layout_below="@id/attendTextSolid"
+                    android:layout_alignStart="@id/attendTextSub2"
+                    android:layout_below="@id/attendTextSub2"
                     android:onClick="sitFunctionSolid"
                     android:text="sit"
                     android:textSize="10sp" />
@@ -172,8 +172,8 @@
                     android:id="@+id/bunkButtonSolid"
                     android:layout_width="60dp"
                     android:layout_height="50dp"
-                    android:layout_alignEnd="@id/attendTextSolid"
-                    android:layout_below="@id/attendTextSolid"
+                    android:layout_alignEnd="@id/attendTextSub2"
+                    android:layout_below="@id/attendTextSub2"
                     android:onClick="bunkFunctionSolid"
                     android:text="Bunk"
                     android:textSize="10sp" />
@@ -216,7 +216,7 @@
                     android:textSize="15sp" />
 
                 <TextView
-                    android:id="@+id/attendTextCircuits"
+                    android:id="@+id/attendTextSub3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignStart="@+id/subjectTextCircuits"
@@ -244,8 +244,8 @@
                     android:id="@+id/sitButtonCircuits"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:layout_alignStart="@id/attendTextCircuits"
-                    android:layout_below="@id/attendTextCircuits"
+                    android:layout_alignStart="@id/attendTextSub3"
+                    android:layout_below="@id/attendTextSub3"
                     android:onClick="sitFunctionCircuits"
                     android:text="sit"
                     android:textSize="10sp" />
@@ -254,8 +254,8 @@
                     android:id="@+id/bunkButtonCircuits"
                     android:layout_width="60dp"
                     android:layout_height="50dp"
-                    android:layout_alignEnd="@id/attendTextCircuits"
-                    android:layout_below="@id/attendTextCircuits"
+                    android:layout_alignEnd="@id/attendTextSub3"
+                    android:layout_below="@id/attendTextSub3"
                     android:onClick="bunkFunctionCircuits"
                     android:text="Bunk"
                     android:textSize="10sp" />
@@ -298,7 +298,7 @@
                     android:textSize="15sp" />
 
                 <TextView
-                    android:id="@+id/attendTextLogic"
+                    android:id="@+id/attendTextSub4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignStart="@+id/subjectTextLogic"
@@ -326,8 +326,8 @@
                     android:id="@+id/sitButtonLogic"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:layout_alignStart="@id/attendTextLogic"
-                    android:layout_below="@id/attendTextLogic"
+                    android:layout_alignStart="@id/attendTextSub4"
+                    android:layout_below="@id/attendTextSub4"
                     android:onClick="sitFunctionLogic"
                     android:text="sit"
                     android:textSize="10sp" />
@@ -336,8 +336,8 @@
                     android:id="@+id/bunkButtonLogic"
                     android:layout_width="60dp"
                     android:layout_height="50dp"
-                    android:layout_alignEnd="@id/attendTextLogic"
-                    android:layout_below="@id/attendTextLogic"
+                    android:layout_alignEnd="@id/attendTextSub4"
+                    android:layout_below="@id/attendTextSub4"
                     android:onClick="bunkFunctionLogic"
                     android:text="Bunk"
                     android:textSize="10sp" />
@@ -380,7 +380,7 @@
                     android:textSize="15sp" />
 
                 <TextView
-                    android:id="@+id/attendTextMath"
+                    android:id="@+id/attendTextSub5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignStart="@+id/subjectTextMath"
@@ -408,8 +408,8 @@
                     android:id="@+id/sitButtonMath"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:layout_alignStart="@id/attendTextMath"
-                    android:layout_below="@id/attendTextMath"
+                    android:layout_alignStart="@id/attendTextSub5"
+                    android:layout_below="@id/attendTextSub5"
                     android:onClick="sitFunctionMath"
                     android:text="sit"
                     android:textSize="10sp" />
@@ -418,8 +418,8 @@
                     android:id="@+id/bunkButtonMath"
                     android:layout_width="60dp"
                     android:layout_height="50dp"
-                    android:layout_alignEnd="@id/attendTextMath"
-                    android:layout_below="@id/attendTextMath"
+                    android:layout_alignEnd="@id/attendTextSub5"
+                    android:layout_below="@id/attendTextSub5"
                     android:onClick="bunkFunctionMath"
                     android:text="Bunk"
                     android:textSize="10sp" />
@@ -462,7 +462,7 @@
                     android:textSize="15sp" />
 
                 <TextView
-                    android:id="@+id/attendTextEco"
+                    android:id="@+id/attendTextSub6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignStart="@+id/subjectTextEco"
@@ -490,8 +490,8 @@
                     android:id="@+id/sitButtonEco"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:layout_alignStart="@id/attendTextEco"
-                    android:layout_below="@id/attendTextEco"
+                    android:layout_alignStart="@id/attendTextSub6"
+                    android:layout_below="@id/attendTextSub6"
                     android:onClick="sitFunctionEco"
                     android:text="sit"
                     android:textSize="10sp" />
@@ -500,8 +500,8 @@
                     android:id="@+id/bunkButtonEco"
                     android:layout_width="60dp"
                     android:layout_height="50dp"
-                    android:layout_alignEnd="@id/attendTextEco"
-                    android:layout_below="@id/attendTextEco"
+                    android:layout_alignEnd="@id/attendTextSub6"
+                    android:layout_below="@id/attendTextSub6"
                     android:onClick="bunkFunctionEco"
                     android:text="Bunk"
                     android:textSize="10sp" />
@@ -544,7 +544,7 @@
                     android:textSize="15sp" />
 
                 <TextView
-                    android:id="@+id/attendTextCircLab"
+                    android:id="@+id/attendTextSub7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignStart="@+id/subjectTextCircLab"
@@ -572,8 +572,8 @@
                     android:id="@+id/sitButtonCircLab"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:layout_alignStart="@id/attendTextCircLab"
-                    android:layout_below="@id/attendTextCircLab"
+                    android:layout_alignStart="@id/attendTextSub7"
+                    android:layout_below="@id/attendTextSub7"
                     android:onClick="sitFunctionCircLab"
                     android:text="sit"
                     android:textSize="10sp" />
@@ -582,8 +582,8 @@
                     android:id="@+id/bunkButtonCircLab"
                     android:layout_width="60dp"
                     android:layout_height="50dp"
-                    android:layout_alignEnd="@id/attendTextCircLab"
-                    android:layout_below="@id/attendTextCircLab"
+                    android:layout_alignEnd="@id/attendTextSub7"
+                    android:layout_below="@id/attendTextSub7"
                     android:onClick="bunkFunctionCircLab"
                     android:text="Bunk"
                     android:textSize="10sp" />
@@ -626,7 +626,7 @@
                     android:textSize="15sp" />
 
                 <TextView
-                    android:id="@+id/attendTextDesLab"
+                    android:id="@+id/attendTextSub8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignStart="@+id/subjectTextDesLab"
@@ -654,8 +654,8 @@
                     android:id="@+id/sitButtonDesLab"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:layout_alignStart="@id/attendTextDesLab"
-                    android:layout_below="@id/attendTextDesLab"
+                    android:layout_alignStart="@id/attendTextSub8"
+                    android:layout_below="@id/attendTextSub8"
                     android:onClick="sitFunctionDesLab"
                     android:text="sit"
                     android:textSize="10sp"
@@ -665,8 +665,8 @@
                     android:id="@+id/bunkButtonDesLab"
                     android:layout_width="60dp"
                     android:layout_height="50dp"
-                    android:layout_alignEnd="@id/attendTextDesLab"
-                    android:layout_below="@id/attendTextDesLab"
+                    android:layout_alignEnd="@id/attendTextSub8"
+                    android:layout_below="@id/attendTextSub8"
                     android:onClick="bunkFunctionDesLab"
                     android:text="Bunk"
                     android:textSize="10sp"
