@@ -5,11 +5,14 @@ import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,16 +26,23 @@ public class MainActivity extends AppCompatActivity {
     TextView subTextSeven,attendTextSub7;//,percentTextCircLab;
     TextView subTextEight,attendTextSub8;//,percentTextDesLab;
 
-    Button sitButtonNetwork,bunkButtonNetwork;
-    Button sitButtonSolid,bunkButtonSolid;
-    Button sitButtonCircuits,bunkButtonCircuits;
-    Button sitButtonLogic,bunkButtonLogic;
-    Button sitButtonMath,bunkButtonMath;
-    Button sitButtonEco,bunkButtonEco;
-    Button sitButtonCircLab,bunkButtonCircLab;
-    Button sitButtonDesLab,bunkButtonDesLab;
+    Button sitButtonSub1,bunkButtonSub1;
+    Button sitButtonSub2,bunkButtonSub2;
+    Button sitButtonSub3,bunkButtonSub3;
+    Button sitButtonSub4,bunkButtonSub4;
+    Button sitButtonSub5,bunkButtonSub5;
+    Button sitButtonSub6,bunkButtonSub6;
+    Button sitButtonSub7,bunkButtonSub7;
+    Button sitButtonSub8,bunkButtonSub8;
 
     SharedPreferences sharedPreferences;
+
+    String currentYear;
+    String currentBranch;
+    String[] subjects;
+
+
+
 
     boolean isFirstRun;
     
@@ -127,9 +137,169 @@ public class MainActivity extends AppCompatActivity {
                                       setNegativeButton("Aayikotte...",null).
                                       show();
                               return true;
+            case R.id.setup : setBranch();
+                              return true;
 
             default: return false;
         }
+    }
+
+    public void setBranch(){
+
+
+        AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
+        LayoutInflater inflater = this.getLayoutInflater();
+        final View view = inflater.inflate(R.layout.dropdown_menu,null);
+        alert.setTitle("Set up");
+        alert.setView(view);
+        alert.setMessage("Select year and branch");
+
+        final Spinner yearSpinner = (Spinner) view.findViewById(R.id.yearSpinner);
+        final Spinner branchSpinner = (Spinner) view.findViewById(R.id.branchSpinner);
+
+        ArrayAdapter<String> yearAdapter = new ArrayAdapter<String>(MainActivity.this,
+                android.R.layout.simple_spinner_item,
+                getResources().getStringArray(R.array.year));
+
+        ArrayAdapter<String> branchAdapter = new ArrayAdapter<String>(MainActivity.this,
+                android.R.layout.simple_spinner_item,
+                getResources().getStringArray(R.array.branch));
+
+
+        yearAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        yearSpinner.setAdapter(yearAdapter);
+
+        branchAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        branchSpinner.setAdapter(branchAdapter);
+
+        alert.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                String yearText = yearSpinner.getSelectedItem().toString();
+                String branchText = branchSpinner.getSelectedItem().toString();
+
+                sharedPreferences.edit().putString("year",yearText).apply();
+                sharedPreferences.edit().putString("branch",branchText).apply();
+
+                changeSubjects();
+
+            }
+        });
+        alert.show();
+
+
+    }
+
+    public void changeSubjects(){
+        currentYear = sharedPreferences.getString("year","");
+        currentBranch = sharedPreferences.getString("branch","");
+
+        if(currentYear.contentEquals("S1") && currentBranch.contentEquals("Electronics and Communication")){
+
+            subjects = getResources().getStringArray(R.array.s1ece);
+
+            subTextOne.setText(subjects[0]);
+            subTextTwo.setText(subjects[1]);
+            subTextThree.setText(subjects[2]);
+            subTextFour.setText(subjects[3]);
+            subTextFive.setText(subjects[4]);
+            subTextSix.setText(subjects[5]);
+            subTextSeven.setText(subjects[6]);
+            subTextEight.setText(subjects[7]);
+
+        }
+        else if(currentYear.contentEquals("S2") && currentBranch.contentEquals("Electronics and Communication")){
+
+            subjects = getResources().getStringArray(R.array.s2ece);
+
+            subTextOne.setText(subjects[0]);
+            subTextTwo.setText(subjects[1]);
+            subTextThree.setText(subjects[2]);
+            subTextFour.setText(subjects[3]);
+            subTextFive.setText(subjects[4]);
+            subTextSix.setText(subjects[5]);
+            subTextSeven.setText(subjects[6]);
+            subTextEight.setText(subjects[7]);
+        }
+        else if(currentYear.contentEquals("S3") && currentBranch.contentEquals("Electronics and Communication")){
+
+            subjects = getResources().getStringArray(R.array.s3ece);
+
+            subTextOne.setText(subjects[0]);
+            subTextTwo.setText(subjects[1]);
+            subTextThree.setText(subjects[2]);
+            subTextFour.setText(subjects[3]);
+            subTextFive.setText(subjects[4]);
+            subTextSix.setText(subjects[5]);
+            subTextSeven.setText(subjects[6]);
+            subTextEight.setText(subjects[7]);
+        }
+        else if(currentYear.contentEquals("S4") && currentBranch.contentEquals("Electronics and Communication")){
+
+            subjects = getResources().getStringArray(R.array.s4ece);
+
+            subTextOne.setText(subjects[0]);
+            subTextTwo.setText(subjects[1]);
+            subTextThree.setText(subjects[2]);
+            subTextFour.setText(subjects[3]);
+            subTextFive.setText(subjects[4]);
+            subTextSix.setText(subjects[5]);
+            subTextSeven.setText(subjects[6]);
+            subTextEight.setText(subjects[7]);
+        }
+        else if(currentYear.contentEquals("S5") && currentBranch.contentEquals("Electronics and Communication")){
+
+            subjects = getResources().getStringArray(R.array.s5ece);
+
+            subTextOne.setText(subjects[0]);
+            subTextTwo.setText(subjects[1]);
+            subTextThree.setText(subjects[2]);
+            subTextFour.setText(subjects[3]);
+            subTextFive.setText(subjects[4]);
+            subTextSix.setText(subjects[5]);
+            subTextSeven.setText(subjects[6]);
+            subTextEight.setText(subjects[7]);
+        }
+        else if(currentYear.contentEquals("S6") && currentBranch.contentEquals("Electronics and Communication")){
+
+            subjects = getResources().getStringArray(R.array.s6ece);
+
+            subTextOne.setText(subjects[0]);
+            subTextTwo.setText(subjects[1]);
+            subTextThree.setText(subjects[2]);
+            subTextFour.setText(subjects[3]);
+            subTextFive.setText(subjects[4]);
+            subTextSix.setText(subjects[5]);
+            subTextSeven.setText(subjects[6]);
+            subTextEight.setText(subjects[7]);
+        }
+        else if(currentYear.contentEquals("S7") && currentBranch.contentEquals("Electronics and Communication")){
+
+            subjects = getResources().getStringArray(R.array.s7ece);
+
+            subTextOne.setText(subjects[0]);
+            subTextTwo.setText(subjects[1]);
+            subTextThree.setText(subjects[2]);
+            subTextFour.setText(subjects[3]);
+            subTextFive.setText(subjects[4]);
+            subTextSix.setText(subjects[5]);
+            subTextSeven.setText(subjects[6]);
+            subTextEight.setText(subjects[7]);
+        }
+        else if(currentYear.contentEquals("S8") && currentBranch.contentEquals("Electronics and Communication")){
+
+            subjects = getResources().getStringArray(R.array.s8ece);
+
+            subTextOne.setText(subjects[0]);
+            subTextTwo.setText(subjects[1]);
+            subTextThree.setText(subjects[2]);
+            subTextFour.setText(subjects[3]);
+            subTextFive.setText(subjects[4]);
+            subTextSix.setText(subjects[5]);
+            subTextSeven.setText(subjects[6]);
+            subTextEight.setText(subjects[7]);
+        }
+
     }
 
     @Override
@@ -137,17 +307,36 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        subTextOne = (TextView) findViewById(R.id.subjectText);
+        subTextOne = (TextView) findViewById(R.id.subjectTextOne);
+        subTextTwo = (TextView) findViewById(R.id.subjectTextTwo);
+        subTextThree = (TextView) findViewById(R.id.subjectTextThree);
+        subTextFour = (TextView) findViewById(R.id.subjectTextFour);
+        subTextFive = (TextView) findViewById(R.id.subjectTextFive);
+        subTextSix = (TextView) findViewById(R.id.subjectTextSix);
+        subTextSeven = (TextView) findViewById(R.id.subjectTextSeven);
+        subTextEight = (TextView) findViewById(R.id.subjectTextEight);
 
+
+        //String sub1,sub2,sub3,sub4,sub5,sub6,sub7,sub8;
 
         sharedPreferences = this.getSharedPreferences(getPackageName(),MODE_PRIVATE);
 
         isFirstRun = getSharedPreferences("PREFERENCE",MODE_PRIVATE)
                 .getBoolean("isFirstRun",true);
 
+        currentYear = sharedPreferences.getString("year","");
+        currentBranch = sharedPreferences.getString("branch","");
+
+
+
+
 
         if(isFirstRun)
         {
+
+            sharedPreferences.edit().putString("year","").apply();
+            sharedPreferences.edit().putString("branch","").apply();
+
             sharedPreferences.edit().putInt("network theory",0).apply();
             sharedPreferences.edit().putInt("network theory total",0).apply();
             sharedPreferences.edit().putFloat("network theory percent",0).apply();
@@ -180,6 +369,10 @@ public class MainActivity extends AppCompatActivity {
             sharedPreferences.edit().putInt("design lab total",0).apply();
             sharedPreferences.edit().putFloat("design lab percent",0).apply();
 
+            setBranch();
+
+
+
         }
 
         getSharedPreferences("PREFERENCE",MODE_PRIVATE).edit()
@@ -187,46 +380,46 @@ public class MainActivity extends AppCompatActivity {
 
         attendTextSub1 = (TextView) findViewById(R.id.attendTextSub1);
         //percentTextNetwork = (TextView) findViewById(R.id.percentTextNetwork);
-        sitButtonNetwork = (Button) findViewById(R.id.sitButtonNetwork);
-        bunkButtonNetwork = (Button) findViewById(R.id.bunkButtonNetwork);
+        sitButtonSub1 = (Button) findViewById(R.id.sitButtonSub1);
+        bunkButtonSub1 = (Button) findViewById(R.id.bunkButtonSub1);
 
         attendTextSub2 = (TextView) findViewById(R.id.attendTextSub2);
         //percentTextSolid = (TextView) findViewById(R.id.percentTextSolid);
-        sitButtonSolid = (Button) findViewById(R.id.sitButtonSolid);
-        bunkButtonSolid = (Button) findViewById(R.id.bunkButtonSolid);
+        sitButtonSub1 = (Button) findViewById(R.id.sitButtonSub1);
+        bunkButtonSub2 = (Button) findViewById(R.id.bunkButtonSub2);
 
         attendTextSub3 = (TextView) findViewById(R.id.attendTextSub3);
         //percentTextCircuits = (TextView) findViewById(R.id.percentTextCircuits);
-        sitButtonCircuits = (Button) findViewById(R.id.sitButtonCircuits);
-        bunkButtonCircuits = (Button) findViewById(R.id.bunkButtonCircuits);
+        sitButtonSub3 = (Button) findViewById(R.id.sitButtonSub3);
+        bunkButtonSub3 = (Button) findViewById(R.id.bunkButtonSub3);
 
         attendTextSub4 = (TextView) findViewById(R.id.attendTextSub4);
         //percentTextLogic = (TextView) findViewById(R.id.percentTextLogic);
-        sitButtonLogic = (Button) findViewById(R.id.sitButtonLogic);
-        bunkButtonLogic = (Button) findViewById(R.id.bunkButtonLogic);
+        sitButtonSub4 = (Button) findViewById(R.id.sitButtonSub4);
+        bunkButtonSub4 = (Button) findViewById(R.id.bunkButtonSub4);
 
         attendTextSub5 = (TextView) findViewById(R.id.attendTextSub5);
         //percentTextMath = (TextView) findViewById(R.id.percentTextMath);
-        sitButtonMath = (Button) findViewById(R.id.sitButtonMath);
-        bunkButtonMath = (Button) findViewById(R.id.bunkButtonMath);
+        sitButtonSub5 = (Button) findViewById(R.id.sitButtonSub5);
+        bunkButtonSub5 = (Button) findViewById(R.id.bunkButtonSub5);
 
         attendTextSub6 = (TextView) findViewById(R.id.attendTextSub6);
         //percentTextEco = (TextView) findViewById(R.id.percentTextEco);
-        sitButtonEco = (Button) findViewById(R.id.sitButtonEco);
-        bunkButtonEco = (Button) findViewById(R.id.bunkButtonEco);
+        sitButtonSub6 = (Button) findViewById(R.id.sitButtonSub6);
+        bunkButtonSub6 = (Button) findViewById(R.id.bunkButtonSub6);
 
         attendTextSub7 = (TextView) findViewById(R.id.attendTextSub7);
         //percentTextCircLab = (TextView) findViewById(R.id.percentTextCircLab);
-        sitButtonCircLab = (Button) findViewById(R.id.sitButtonCircLab);
-        bunkButtonCircLab = (Button) findViewById(R.id.bunkButtonCircLab);
+        sitButtonSub7 = (Button) findViewById(R.id.sitButtonSub7);
+        bunkButtonSub7 = (Button) findViewById(R.id.bunkButtonSub7);
 
         attendTextSub8 = (TextView) findViewById(R.id.attendTextSub8);
         //percentTextDesLab = (TextView) findViewById(R.id.percentTextDesLab);
-        sitButtonDesLab = (Button) findViewById(R.id.sitButtonDesLab);
-        bunkButtonDesLab = (Button) findViewById(R.id.bunkButtonDesLab);
+        sitButtonSub8 = (Button) findViewById(R.id.sitButtonSub8);
+        bunkButtonSub8 = (Button) findViewById(R.id.bunkButtonSub8);
 
 
-
+       changeSubjects();
 
 
         attendTextSub1.setText(String.valueOf(sharedPreferences.getInt("network theory",0)) + "/" + sharedPreferences.getInt("network theory total",0)+" "+String.format("%.2f",sharedPreferences.getFloat("network theory percent",0))+"%");
@@ -255,6 +448,37 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        changeSubjects();
+    }
+
+    public void viewSyllabus(View view){
+
+        TextView text = (TextView) view;
+        String subj =  text.getText().toString();
+
+        AlertDialog.Builder syllabusAlert = new AlertDialog.Builder(MainActivity.this);
+        syllabusAlert.setTitle("Syllabus");
+        switch(subj){
+            case "   Network Theory   " : syllabusAlert.setMessage("Module 1 : Introduction to circuit variables and circuit elements ,Review of \n" +
+                    " Kirchhoff’s Laws, Independent and dependent Sources, Source 15\n" +
+                    "transformations\n" +
+                    "Network topology, Network graphs, Trees, Incidence matrix, 2\n" +
+                    "Tie-set matrix and Cut-set matrix"+"Solution methods applied to dc and phasor circuits: Mesh and node "+
+                "analysis of network containing independent and dependent sources");
+                                    break;
+
+            default: break;
+        }
+        syllabusAlert.show();
+    }
+
+
 
     public void sitFunctionNetwork(View view){
 
