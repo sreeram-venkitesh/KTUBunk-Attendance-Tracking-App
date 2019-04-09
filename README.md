@@ -1,8 +1,8 @@
-# S3LBunkers
+# KTUBunk
 
 ### An attendance tracking app for college students.
 
-Currently only available for semester 3 students pursuing Electronics and Communication Engineering in Kerala Technological University.
+Added option to select any branch and any semester under the Kerala Technological University.
 
 
 ![Capture.PNG](https://cdn.steemitimages.com/DQmWz4EEFeJt3wUPfQqXgtDrHszR27UR2k6aBQhD9KhYUnb/Capture.PNG)
