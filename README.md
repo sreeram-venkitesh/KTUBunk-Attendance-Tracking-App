@@ -16,3 +16,4 @@ You can select the reset option from the menu if you want to delete all the curr
 ![Capture3.PNG](https://cdn.steemitimages.com/DQmSgTm4ueL94Fbw6tuPBTE923181Ebk1cj218WXveDeHz6/Capture3.PNG)
 
 This will remove all the saved values and will set it back to zero.
+#can add more interesting features:)
